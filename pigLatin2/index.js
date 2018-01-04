@@ -18,6 +18,8 @@ function translatePigLatin(str) {
     }
   }
   
+  
+  
  str =  str.join("");
   
   return str;
