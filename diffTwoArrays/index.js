@@ -1,33 +1,24 @@
-
-
 function diffArray(arr1, arr2) {
-  var mergedArr = arr1.concat(arr2);
-  var different = [];
-  
-
-  
-
-     for (var q = 0; q < arr1.length; q++){
-     for (var e = 0; e < arr2.length; e++){
-        
-       
-      
-        if (!arr1.includes(arr2[e])) {
-          different.push(arr2[e]);
-          
-        } if (!arr2.includes(arr1[q])) {
-          different.push(arr1[q]);
-        } 
-        }
-       
-      }
-      
-      
-        return different;
+	var different = [];
+	if (arr1.length == 0) {
+		return arr2;
+	}
+	if (arr2.length == 0) {
+		return arr1;
+	}
+	for (var i = 0; i < arr1.length; i++) {
+		for (var num = 0; num < arr2.length; num++) {
+			if (!arr1.includes(arr2[num])) {
+				different.push(arr2[num]);
+			}
+			if (!arr2.includes(arr1[i])) {
+				different.push(arr1[i]);
+			}
+		}
+	}
+	return different;
 }
-
-
-diffArray([], ["snuffleupagus", "cookie monster", "elmo"]);
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 
 // function diffArray(arr1, arr2) {
 //   var newArr = [];
