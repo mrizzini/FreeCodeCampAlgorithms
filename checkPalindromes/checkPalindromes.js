@@ -16,3 +16,18 @@ console.log(palindrome("---M.odm/"));
 console.log(palindrome("My age is 0, 0 si ega ym."));
 
 //checking for Palindromes.
+
+
+// FOLLOWING IS REFACTORING
+
+function palindrome(str) {
+	var newStr;
+	newStr = str.replace(/[^0-9a-zA-Z]/g, "").toLowerCase();
+	str = newStr.split("").reverse().join("");
+	if (str === newStr) {
+		return true;
+	} else {
+		return false;
+	}
+}
+palindrome("not a palindrome");
