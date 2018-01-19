@@ -14,3 +14,11 @@ function reverseString(str) {
 }
 
 console.log(reverseString("hello"));
+
+// THE FOLLOWING IS REFACTORED
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+reverseString("hello");
