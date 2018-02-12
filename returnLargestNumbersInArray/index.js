@@ -24,6 +24,31 @@ function largestOfFour(arr) {
 largestOfFour([[4333, 232, 10, 300], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 
 
+// OR THIS
+
+function largestOfFour(arr) {
+  var largest = [];
+  var largestOfArray;
+  for (var i = 0; i < arr.length; i++) { 
+    if (arr[i][0] > arr[i][1]) {
+      largestOfArray = arr[i][0];
+    } else {
+     largestOfArray = arr[i][1]; 
+    } if (arr[i][2] > largestOfArray) {
+      largestOfArray = arr[i][2];
+    } if (arr[i][3] > largestOfArray) {
+      largestOfArray = arr[i][3];
+    } 
+      largest.push(largestOfArray);
+  }
+  
+  return largest;
+}
+
+largestOfFour([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]]);
+
+
+
 // Input -  Four sub arrays in one array. Each array contains 4 numbers.
 
 // Output - One array consisting of the largest number in each sub array
